@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: stripe fixture identity is bound to its exact synthetic document
+ok 1 - stripe fixture identity is bound to its exact synthetic document
+  ---
+  duration_ms: 1.348849
+  type: 'test'
+  ...
+# Subtest: stripe fixture declares UTF-8 in header and early metadata; exact Unicode remains
+ok 2 - stripe fixture declares UTF-8 in header and early metadata; exact Unicode remains
+  ---
+  duration_ms: 0.4254
+  type: 'test'
+  ...
+# Subtest: stripe fixture return and cancellation bind the same exact order
+ok 3 - stripe fixture return and cancellation bind the same exact order
+  ---
+  duration_ms: 0.334914
+  type: 'test'
+  ...
+# Subtest: stripe observed order is selected by ID/provider, never list position
+ok 4 - stripe observed order is selected by ID/provider, never list position
+  ---
+  duration_ms: 0.24554
+  type: 'test'
+  ...
+# Subtest: paypal fixture identity is bound to its exact synthetic document
+ok 5 - paypal fixture identity is bound to its exact synthetic document
+  ---
+  duration_ms: 0.222245
+  type: 'test'
+  ...
+# Subtest: paypal fixture declares UTF-8 in header and early metadata; exact Unicode remains
+ok 6 - paypal fixture declares UTF-8 in header and early metadata; exact Unicode remains
+  ---
+  duration_ms: 0.135324
+  type: 'test'
+  ...
+# Subtest: paypal fixture return and cancellation bind the same exact order
+ok 7 - paypal fixture return and cancellation bind the same exact order
+  ---
+  duration_ms: 0.220752
+  type: 'test'
+  ...
+# Subtest: paypal observed order is selected by ID/provider, never list position
+ok 8 - paypal observed order is selected by ID/provider, never list position
+  ---
+  duration_ms: 0.223226
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL 
+ok 9 - fixture refuses unrelated or malformed provider URL 
+  ---
+  duration_ms: 0.291178
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL not a URL
+ok 10 - fixture refuses unrelated or malformed provider URL not a URL
+  ---
+  duration_ms: 0.28599
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL http://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001
+ok 11 - fixture refuses unrelated or malformed provider URL http://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.11984
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com.evil.invalid/c/pay/sa-ui-000000000000000000000001
+ok 12 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com.evil.invalid/c/pay/sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.098999
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://user:password@checkout.stripe.com/c/pay/sa-ui-000000000000000000000001
+ok 13 - fixture refuses unrelated or malformed provider URL https://user:password@checkout.stripe.com/c/pay/sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.62502
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com:444/c/pay/sa-ui-000000000000000000000001
+ok 14 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com:444/c/pay/sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.057035
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/REAL_SESSION_ID
+ok 15 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/REAL_SESSION_ID
+  ---
+  duration_ms: 0.05302
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001?extra=true
+ok 16 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001?extra=true
+  ---
+  duration_ms: 0.046891
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001\#fragment
+ok 17 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001\#fragment
+  ---
+  duration_ms: 0.037547
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001/more
+ok 18 - fixture refuses unrelated or malformed provider URL https://checkout.stripe.com/c/pay/sa-ui-000000000000000000000001/more
+  ---
+  duration_ms: 0.068042
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://www.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001
+ok 19 - fixture refuses unrelated or malformed provider URL https://www.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.036906
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001&token=sa-ui-000000000000000000000099
+ok 20 - fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001&token=sa-ui-000000000000000000000099
+  ---
+  duration_ms: 0.054532
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001&extra=1
+ok 21 - fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=sa-ui-000000000000000000000001&extra=1
+  ---
+  duration_ms: 0.146951
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=not-synthetic
+ok 22 - fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/checkoutnow?token=not-synthetic
+  ---
+  duration_ms: 0.058518
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/other?token=sa-ui-000000000000000000000001
+ok 23 - fixture refuses unrelated or malformed provider URL https://www.sandbox.paypal.com/other?token=sa-ui-000000000000000000000001
+  ---
+  duration_ms: 0.034442
+  type: 'test'
+  ...
+# Subtest: fixture refuses unrelated or malformed provider URL javascript:alert(1)
+ok 24 - fixture refuses unrelated or malformed provider URL javascript:alert(1)
+  ---
+  duration_ms: 0.029585
+  type: 'test'
+  ...
+# Subtest: fixture order lookup tolerates empty and unfinished reads, without inventing an order
+ok 25 - fixture order lookup tolerates empty and unfinished reads, without inventing an order
+  ---
+  duration_ms: 0.091448
+  type: 'test'
+  ...
+# Subtest: logout evidence is buffered before browser delivery and survives immediate navigation
+ok 26 - logout evidence is buffered before browser delivery and survives immediate navigation
+  ---
+  duration_ms: 0.353482
+  type: 'test'
+  ...
+# Subtest: failed logout evidence remains failed, never normalized into a successful revocation
+ok 27 - failed logout evidence remains failed, never normalized into a successful revocation
+  ---
+  duration_ms: 0.202174
+  type: 'test'
+  ...
+# Subtest: invalid logout JSON fails the observing test and always disposes its response
+ok 28 - invalid logout JSON fails the observing test and always disposes its response
+  ---
+  duration_ms: 0.38552
+  type: 'test'
+  ...
+# Subtest: failure to deliver/logout evidence is not caught and reported as a pass
+ok 29 - failure to deliver/logout evidence is not caught and reported as a pass
+  ---
+  duration_ms: 0.264178
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 74.368495

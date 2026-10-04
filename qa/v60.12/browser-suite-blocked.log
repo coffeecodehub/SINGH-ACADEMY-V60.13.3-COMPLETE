@@ -1,0 +1,19 @@
+
+> singh-academy@60.12.0 test:ui
+> npm --prefix frontend run test:ui
+
+
+> singh-academy-frontend@60.12.0 test:ui
+> node ../scripts/run-ui-browser.mjs
+
+file:///mnt/data/v6012_work/SINGH-ACADEMY-V60.11.1-COMPLETE/scripts/run-ui-browser.mjs:5
+if(!fs.existsSync(cli))throw Error('Project Playwright is not installed. Run npm run install:all first.');
+                             ^
+
+Error: Project Playwright is not installed. Run npm run install:all first.
+    at file:///mnt/data/v6012_work/SINGH-ACADEMY-V60.11.1-COMPLETE/scripts/run-ui-browser.mjs:5:30
+    at ModuleJob.run (node:internal/modules/esm/module_job:274:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:644:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5)
+
+Node.js v22.16.0

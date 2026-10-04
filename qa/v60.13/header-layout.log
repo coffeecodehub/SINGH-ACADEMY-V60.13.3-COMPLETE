@@ -1,0 +1,3 @@
+before {'.nav': {'font': '16px', 'w': 1897, 'h': 72}, '.brand>span:last-child': {'font': '27px', 'w': 259.609375, 'h': 27}, '.logoShell': {'font': '16px', 'w': 48, 'h': 58}, '.nav nav a': {'font': '12px', 'w': 33.34375, 'h': 16.796875}}
+after {'.nav': {'font': '16px', 'w': 1897, 'h': 80}, '.brand>span:last-child': {'font': '29px', 'w': 278.828125, 'h': 29}, '.logoShell': {'font': '16px', 'w': 52, 'h': 64}, '.nav nav a': {'font': '13px', 'w': 36.125, 'h': 18.1875}}
+Layout cases 126 fail 0

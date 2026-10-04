@@ -1,0 +1,268 @@
+TAP version 13
+# Subtest: coherent public landing accepted
+ok 1 - coherent public landing accepted
+  ---
+  duration_ms: 0.953504
+  type: 'test'
+  ...
+# Subtest: coherent login with preserved destination accepted
+ok 2 - coherent login with preserved destination accepted
+  ---
+  duration_ms: 0.102855
+  type: 'test'
+  ...
+# Subtest: refuses wrong host
+ok 3 - refuses wrong host
+  ---
+  duration_ms: 0.220652
+  type: 'test'
+  ...
+# Subtest: refuses wrong port
+ok 4 - refuses wrong port
+  ---
+  duration_ms: 0.133261
+  type: 'test'
+  ...
+# Subtest: refuses protected route
+ok 5 - refuses protected route
+  ---
+  duration_ms: 0.07992
+  type: 'test'
+  ...
+# Subtest: refuses login-like nested route
+ok 6 - refuses login-like nested route
+  ---
+  duration_ms: 0.110937
+  type: 'test'
+  ...
+# Subtest: refuses unfinished document
+ok 7 - refuses unfinished document
+  ---
+  duration_ms: 0.063846
+  type: 'test'
+  ...
+# Subtest: refuses not-yet-complete document
+ok 8 - refuses not-yet-complete document
+  ---
+  duration_ms: 0.052539
+  type: 'test'
+  ...
+# Subtest: refuses zero visible headers
+ok 9 - refuses zero visible headers
+  ---
+  duration_ms: 0.210166
+  type: 'test'
+  ...
+# Subtest: refuses two VISIBLE headers
+ok 10 - refuses two VISIBLE headers
+  ---
+  duration_ms: 0.556458
+  type: 'test'
+  ...
+# Subtest: refuses two hydrated VISIBLE headers
+ok 11 - refuses two hydrated VISIBLE headers
+  ---
+  duration_ms: 0.125418
+  type: 'test'
+  ...
+# Subtest: refuses unhydrated sole header
+ok 12 - refuses unhydrated sole header
+  ---
+  duration_ms: 0.059029
+  type: 'test'
+  ...
+# Subtest: refuses missing sign in
+ok 13 - refuses missing sign in
+  ---
+  duration_ms: 0.044277
+  type: 'test'
+  ...
+# Subtest: refuses duplicate sign in
+ok 14 - refuses duplicate sign in
+  ---
+  duration_ms: 0.038528
+  type: 'test'
+  ...
+# Subtest: refuses visible logout button
+ok 15 - refuses visible logout button
+  ---
+  duration_ms: 0.041542
+  type: 'test'
+  ...
+# Subtest: refuses visible old account chip
+ok 16 - refuses visible old account chip
+  ---
+  duration_ms: 0.034993
+  type: 'test'
+  ...
+# Subtest: refuses login form at landing URL
+ok 17 - refuses login form at landing URL
+  ---
+  duration_ms: 0.085449
+  type: 'test'
+  ...
+# Subtest: hidden streaming copy does not count as a duplicate rendered header
+ok 18 - hidden streaming copy does not count as a duplicate rendered header
+  ---
+  duration_ms: 0.115584
+  type: 'test'
+  ...
+# Subtest: refuses landing DOM at login URL
+ok 19 - refuses landing DOM at login URL
+  ---
+  duration_ms: 0.084367
+  type: 'test'
+  ...
+# Subtest: refuses missing login form
+ok 20 - refuses missing login form
+  ---
+  duration_ms: 0.052118
+  type: 'test'
+  ...
+# Subtest: refuses duplicate login forms
+ok 21 - refuses duplicate login forms
+  ---
+  duration_ms: 0.044377
+  type: 'test'
+  ...
+# Subtest: refuses missing email
+ok 22 - refuses missing email
+  ---
+  duration_ms: 0.044597
+  type: 'test'
+  ...
+# Subtest: refuses missing password
+ok 23 - refuses missing password
+  ---
+  duration_ms: 0.03984
+  type: 'test'
+  ...
+# Subtest: refuses disabled submit
+ok 24 - refuses disabled submit
+  ---
+  duration_ms: 0.041383
+  type: 'test'
+  ...
+# Subtest: refuses old account on login
+ok 25 - refuses old account on login
+  ---
+  duration_ms: 0.042084
+  type: 'test'
+  ...
+# Subtest: explicit logout still requires / and cannot pass on /login
+ok 26 - explicit logout still requires / and cannot pass on /login
+  ---
+  duration_ms: 0.074142
+  type: 'test'
+  ...
+# Subtest: login-only observation cannot pass on a landing page
+ok 27 - login-only observation cannot pass on a landing page
+  ---
+  duration_ms: 0.062024
+  type: 'test'
+  ...
+# Subtest: two consistent samples required, without expanding the allowed guest destinations
+ok 28 - two consistent samples required, without expanding the allowed guest destinations
+  ---
+  duration_ms: 0.155164
+  type: 'test'
+  ...
+# Subtest: redirect after landing sample checks the LOGIN form, not the old header selector
+ok 29 - redirect after landing sample checks the LOGIN form, not the old header selector
+  ---
+  duration_ms: 0.100822
+  type: 'test'
+  ...
+# Subtest: changed document identity resets a candidate at the same URL
+ok 30 - changed document identity resets a candidate at the same URL
+  ---
+  duration_ms: 0.12003
+  type: 'test'
+  ...
+# Subtest: provisional navigation blocks a visually ready old document
+ok 31 - provisional navigation blocks a visually ready old document
+  ---
+  duration_ms: 0.156806
+  type: 'test'
+  ...
+# Subtest: navigation epoch changes reset stability even with same URL/document
+ok 32 - navigation epoch changes reset stability even with same URL/document
+  ---
+  duration_ms: 0.096335
+  type: 'test'
+  ...
+# Subtest: visible duplicate introduced between samples cannot be hidden by cached readiness
+ok 33 - visible duplicate introduced between samples cannot be hidden by cached readiness
+  ---
+  duration_ms: 0.101673
+  type: 'test'
+  ...
+# Subtest: helper follows the current guest route instead of capturing a one-time branch
+ok 34 - helper follows the current guest route instead of capturing a one-time branch
+  ---
+  duration_ms: 70.609256
+  type: 'test'
+  ...
+# Subtest: request observers are attached before Back/Refresh begins
+ok 35 - request observers are attached before Back/Refresh begins
+  ---
+  duration_ms: 12.859019
+  type: 'test'
+  ...
+# Subtest: helper monitors unfinished main-document requests until they finish
+ok 36 - helper monitors unfinished main-document requests until they finish
+  ---
+  duration_ms: 10.583876
+  type: 'test'
+  ...
+# Subtest: unrelated API requests cannot block guest observation
+ok 37 - unrelated API requests cannot block guest observation
+  ---
+  duration_ms: 7.542299
+  type: 'test'
+  ...
+# Subtest: main-frame navigation during evaluation cannot pass on that stale sample
+ok 38 - main-frame navigation during evaluation cannot pass on that stale sample
+  ---
+  duration_ms: 9.937814
+  type: 'test'
+  ...
+# Subtest: real Back/Refresh navigation errors are propagated, never ignored
+ok 39 - real Back/Refresh navigation errors are propagated, never ignored
+  ---
+  duration_ms: 11.121084
+  type: 'test'
+  ...
+# Subtest: helper rejects persistent two-visible-header bug instead of first()/nth()
+ok 40 - helper rejects persistent two-visible-header bug instead of first()/nth()
+  ---
+  duration_ms: 11.30499
+  type: 'test'
+  ...
+# Subtest: unrelated evaluation errors are not masked as navigation
+ok 41 - unrelated evaluation errors are not masked as navigation
+  ---
+  duration_ms: 9.833076
+  type: 'test'
+  ...
+# Subtest: a context being replaced is re-observed; no action or request is replayed
+ok 42 - a context being replaced is re-observed; no action or request is replayed
+  ---
+  duration_ms: 10.977248
+  type: 'test'
+  ...
+# Subtest: page closure is a real error even if context-destroyed text is present
+ok 43 - page closure is a real error even if context-destroyed text is present
+  ---
+  duration_ms: 7.17764
+  type: 'test'
+  ...
+1..43
+# tests 43
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 410.282335

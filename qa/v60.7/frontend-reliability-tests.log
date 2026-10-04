@@ -1,0 +1,200 @@
+
+> singh-academy@60.7.0 test:reliability
+> node --test frontend/test/*.test.mjs
+
+TAP version 13
+# Subtest: API defaults to same-origin /api instead of a visitor localhost
+ok 1 - API defaults to same-origin /api instead of a visitor localhost
+  ---
+  duration_ms: 148.824075
+  type: 'test'
+  ...
+# Subtest: transient GET failure retries once without expiring session
+ok 2 - transient GET failure retries once without expiring session
+  ---
+  duration_ms: 460.673671
+  type: 'test'
+  ...
+# Subtest: long Retry-After is respected without hammering the backend
+ok 3 - long Retry-After is respected without hammering the backend
+  ---
+  duration_ms: 59.735595
+  type: 'test'
+  ...
+# Subtest: only recognized SESSION_REQUIRED requests a session recheck
+ok 4 - only recognized SESSION_REQUIRED requests a session recheck
+  ---
+  duration_ms: 38.382884
+  type: 'test'
+  ...
+# Subtest: provider/password 401 does not clear the student session
+ok 5 - provider/password 401 does not clear the student session
+  ---
+  duration_ms: 29.121173
+  type: 'test'
+  ...
+# Subtest: mutating checkout is never automatically retried
+ok 6 - mutating checkout is never automatically retried
+  ---
+  duration_ms: 24.964623
+  type: 'test'
+  ...
+# Subtest: shared public request survives one subscriber abort
+ok 7 - shared public request survives one subscriber abort
+  ---
+  duration_ms: 24.45303
+  type: 'test'
+  ...
+# Subtest: only public data is reused; private progress is read per request
+ok 8 - only public data is reused; private progress is read per request
+  ---
+  duration_ms: 22.356428
+  type: 'test'
+  ...
+# Subtest: caller cancellation remains AbortError, not a fabricated timeout
+ok 9 - caller cancellation remains AbortError, not a fabricated timeout
+  ---
+  duration_ms: 24.891131
+  type: 'test'
+  ...
+# Subtest: stale 401 from before a new login cannot invalidate that account
+ok 10 - stale 401 from before a new login cannot invalidate that account
+  ---
+  duration_ms: 19.396868
+  type: 'test'
+  ...
+# Subtest: public fetch omits credentials while private fetch includes HttpOnly cookies
+ok 11 - public fetch omits credentials while private fetch includes HttpOnly cookies
+  ---
+  duration_ms: 14.27911
+  type: 'test'
+  ...
+# Subtest: invalid upstream HTML is not converted into empty JSON success
+ok 12 - invalid upstream HTML is not converted into empty JSON success
+  ---
+  duration_ms: 551.915119
+  type: 'test'
+  ...
+# Subtest: verified student remains signed in after transient session 503
+ok 13 - verified student remains signed in after transient session 503
+  ---
+  duration_ms: 139.547441
+  type: 'test'
+  ...
+# Subtest: initial session failure stays unresolved rather than redirecting as an anonymous user
+ok 14 - initial session failure stays unresolved rather than redirecting as an anonymous user
+  ---
+  duration_ms: 34.299588
+  type: 'test'
+  ...
+# Subtest: identical session refresh preserves user object identity and therefore learning draft dependencies
+ok 15 - identical session refresh preserves user object identity and therefore learning draft dependencies
+  ---
+  duration_ms: 27.798872
+  type: 'test'
+  ...
+# Subtest: confirmed anonymous session actually clears expired authentication
+ok 16 - confirmed anonymous session actually clears expired authentication
+  ---
+  duration_ms: 19.813994
+  type: 'test'
+  ...
+# Subtest: old anonymous response cannot overwrite a later successful login
+ok 17 - old anonymous response cannot overwrite a later successful login
+  ---
+  duration_ms: 23.168261
+  type: 'test'
+  ...
+# Subtest: failed server logout preserves local identity and reports the failure to the caller
+ok 18 - failed server logout preserves local identity and reports the failure to the caller
+  ---
+  duration_ms: 29.539744
+  type: 'test'
+  ...
+# Subtest: switching portals never reuses a student identity for client admin
+ok 19 - switching portals never reuses a student identity for client admin
+  ---
+  duration_ms: 18.818201
+  type: 'test'
+  ...
+# Subtest: changing verified accounts remounts private descendants under a different owner key
+ok 20 - changing verified accounts remounts private descendants under a different owner key
+  ---
+  duration_ms: 15.499392
+  type: 'test'
+  ...
+# Subtest: duplicate unauthorized notifications share one session revalidation
+ok 21 - duplicate unauthorized notifications share one session revalidation
+  ---
+  duration_ms: 28.689542
+  type: 'test'
+  ...
+# Subtest: proxy refuses missing, self-referencing and non-origin upstream settings
+ok 22 - proxy refuses missing, self-referencing and non-origin upstream settings
+  ---
+  duration_ms: 1.310236
+  type: 'test'
+  ...
+# Subtest: proxy resolves target at runtime and forbids upstream redirects
+ok 23 - proxy resolves target at runtime and forbids upstream redirects
+  ---
+  duration_ms: 5.62384
+  type: 'test'
+  ...
+# Subtest: proxy forwards cookies and portal, discards client host/IP spoof headers
+ok 24 - proxy forwards cookies and portal, discards client host/IP spoof headers
+  ---
+  duration_ms: 2.178987
+  type: 'test'
+  ...
+# Subtest: proxy preserves separate Set-Cookie headers, makes Academy cookies host-only, never CDN caches
+ok 25 - proxy preserves separate Set-Cookie headers, makes Academy cookies host-only, never CDN caches
+  ---
+  duration_ms: 1.777863
+  type: 'test'
+  ...
+# Subtest: upstream failure remains error, never successful anonymous session
+ok 26 - upstream failure remains error, never successful anonymous session
+  ---
+  duration_ms: 1.262636
+  type: 'test'
+  ...
+# Subtest: JSON error status passes through with request identity
+ok 27 - JSON error status passes through with request identity
+  ---
+  duration_ms: 0.903791
+  type: 'test'
+  ...
+# Subtest: raw webhook payload streams byte-for-byte through real HTTP upstream
+ok 28 - raw webhook payload streams byte-for-byte through real HTTP upstream
+  ---
+  duration_ms: 34.4281
+  type: 'test'
+  ...
+# Subtest: encoded traversal cannot escape the fixed /api namespace
+ok 29 - encoded traversal cannot escape the fixed /api namespace
+  ---
+  duration_ms: 0.599089
+  type: 'test'
+  ...
+# Subtest: range and binary response metadata survive without buffering/corrupting media
+ok 30 - range and binary response metadata survive without buffering/corrupting media
+  ---
+  duration_ms: 1.787026
+  type: 'test'
+  ...
+# Subtest: loopback HTTP exception is confined to explicit local test requests, not hosted review
+ok 31 - loopback HTTP exception is confined to explicit local test requests, not hosted review
+  ---
+  duration_ms: 0.601668
+  type: 'test'
+  ...
+1..31
+# tests 31
+# suites 0
+# pass 31
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1722.577937

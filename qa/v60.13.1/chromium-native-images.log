@@ -1,0 +1,31 @@
+{
+  "browser": "144.0.7559.96",
+  "passedChecks": 21,
+  "failedChecks": 0,
+  "comparisons": [
+    {
+      "case": "V60.13 one pixel / src only",
+      "decoded": true,
+      "naturalWidth": 1,
+      "naturalHeight": 1,
+      "complete": true,
+      "event": "load"
+    },
+    {
+      "case": "V60.13 one pixel / declared 480w",
+      "decoded": true,
+      "naturalWidth": 0,
+      "naturalHeight": 0,
+      "complete": true,
+      "event": "load"
+    },
+    {
+      "case": "V60.13.1 actual 480px / declared 480w",
+      "decoded": true,
+      "naturalWidth": 347,
+      "naturalHeight": 195,
+      "complete": true,
+      "event": "load"
+    }
+  ]
+}

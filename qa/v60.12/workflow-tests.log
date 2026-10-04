@@ -1,0 +1,190 @@
+TAP version 13
+# Subtest: unknown checkout identity survives a remount with the same owner/product/provider/key
+ok 1 - unknown checkout identity survives a remount with the same owner/product/provider/key
+  ---
+  duration_ms: 1.077419
+  type: 'test'
+  ...
+# Subtest: browser pending checkout metadata cannot restore a different student identity
+ok 2 - browser pending checkout metadata cannot restore a different student identity
+  ---
+  duration_ms: 0.15025
+  type: 'test'
+  ...
+# Subtest: settled checkout clears only its exact owned order and leaves other account/order attempts
+ok 3 - settled checkout clears only its exact owned order and leaves other account/order attempts
+  ---
+  duration_ms: 0.792305
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: oops
+ok 4 - malformed/mis-scoped pending checkout is never accepted: oops
+  ---
+  duration_ms: 0.253267
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: null
+ok 5 - malformed/mis-scoped pending checkout is never accepted: null
+  ---
+  duration_ms: 0.095556
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: {}
+ok 6 - malformed/mis-scoped pending checkout is never accepted: {}
+  ---
+  duration_ms: 0.118078
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+ok 7 - malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+  ---
+  duration_ms: 0.075317
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+ok 8 - malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+  ---
+  duration_ms: 0.063433
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+ok 9 - malformed/mis-scoped pending checkout is never accepted: {"owner":"aaaaaaaaaaaaaaaaaaaaaaaa","kind":"c
+  ---
+  duration_ms: 0.38695
+  type: 'test'
+  ...
+# Subtest: malformed/mis-scoped pending checkout is never accepted: {"owner":"another","kind":"course","product":
+ok 10 - malformed/mis-scoped pending checkout is never accepted: {"owner":"another","kind":"course","product":
+  ---
+  duration_ms: 0.262303
+  type: 'test'
+  ...
+# Subtest: browser storage exceptions do not fabricate a settled checkout
+ok 11 - browser storage exceptions do not fabricate a settled checkout
+  ---
+  duration_ms: 0.282909
+  type: 'test'
+  ...
+# Subtest: free-course route is warmed without automatically enrolling or calling checkout
+ok 12 - free-course route is warmed without automatically enrolling or calling checkout
+  ---
+  duration_ms: 52.979675
+  type: 'test'
+  ...
+# Subtest: first free-course Start creates one enrollment and remains busy until learning navigation
+ok 13 - first free-course Start creates one enrollment and remains busy until learning navigation
+  ---
+  duration_ms: 39.867803
+  type: 'test'
+  ...
+# Subtest: free Start remains disabled before hydration and cannot lose the first enabled click
+ok 14 - free Start remains disabled before hydration and cannot lose the first enabled click
+  ---
+  duration_ms: 31.235994
+  type: 'test'
+  ...
+# Subtest: enrollment error shows feedback and releases only the current start lock
+ok 15 - enrollment error shows feedback and releases only the current start lock
+  ---
+  duration_ms: 21.032412
+  type: 'test'
+  ...
+# Subtest: logout/account switch while enrollment is pending prevents late learning navigation
+ok 16 - logout/account switch while enrollment is pending prevents late learning navigation
+  ---
+  duration_ms: 23.562025
+  type: 'test'
+  ...
+# Subtest: changing course while enrollment is pending cancels its stale redirect
+ok 17 - changing course while enrollment is pending cancels its stale redirect
+  ---
+  duration_ms: 18.366383
+  type: 'test'
+  ...
+# Subtest: paid course without access goes to checkout but never creates payment on the detail page
+ok 18 - paid course without access goes to checkout but never creates payment on the detail page
+  ---
+  duration_ms: 39.296355
+  type: 'test'
+  ...
+# Subtest: paid course with verified access only creates its missing enrollment then opens learning
+ok 19 - paid course with verified access only creates its missing enrollment then opens learning
+  ---
+  duration_ms: 15.83315
+  type: 'test'
+  ...
+# Subtest: unresolved Stripe attempt disables PayPal and callback guard refuses a different key
+ok 20 - unresolved Stripe attempt disables PayPal and callback guard refuses a different key
+  ---
+  duration_ms: 40.440175
+  type: 'test'
+  ...
+# Subtest: unresolved purchase fence survives refresh/remount in the same account
+ok 21 - unresolved purchase fence survives refresh/remount in the same account
+  ---
+  duration_ms: 63.123908
+  type: 'test'
+  ...
+# Subtest: another student cannot inherit a browser pending-checkout key
+ok 22 - another student cannot inherit a browser pending-checkout key
+  ---
+  duration_ms: 22.345477
+  type: 'test'
+  ...
+# Subtest: pageshow during unfinished creation cannot unlock a second checkout POST
+ok 23 - pageshow during unfinished creation cannot unlock a second checkout POST
+  ---
+  duration_ms: 24.51748
+  type: 'test'
+  ...
+# Subtest: wrong order/provider identity from a malformed response never redirects to payment
+ok 24 - wrong order/provider identity from a malformed response never redirects to payment
+  ---
+  duration_ms: 19.709517
+  type: 'test'
+  ...
+# Subtest: paid same-key response opens owned receipt status and clears only its retry metadata
+ok 25 - paid same-key response opens owned receipt status and clears only its retry metadata
+  ---
+  duration_ms: 23.771529
+  type: 'test'
+  ...
+# Subtest: pending stored checkout contains no price, user credentials, card data or access grant
+ok 26 - pending stored checkout contains no price, user credentials, card data or access grant
+  ---
+  duration_ms: 23.814055
+  type: 'test'
+  ...
+# Subtest: Next fixture output isolation never changes normal production output: false
+ok 27 - Next fixture output isolation never changes normal production output: false
+  ---
+  duration_ms: 4.036584
+  type: 'test'
+  ...
+# Subtest: Next fixture output isolation never changes normal production output: true
+ok 28 - Next fixture output isolation never changes normal production output: true
+  ---
+  duration_ms: 2.290854
+  type: 'test'
+  ...
+# Subtest: account switch during checkout response cannot redirect or clear another account attempt
+ok 29 - account switch during checkout response cannot redirect or clear another account attempt
+  ---
+  duration_ms: 24.878808
+  type: 'test'
+  ...
+# Subtest: checkout response after a product change cannot navigate the new page to an old purchase
+ok 30 - checkout response after a product change cannot navigate the new page to an old purchase
+  ---
+  duration_ms: 29.139287
+  type: 'test'
+  ...
+1..30
+# tests 30
+# suites 0
+# pass 30
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 843.744266

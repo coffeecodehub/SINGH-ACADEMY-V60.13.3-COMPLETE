@@ -1,0 +1,3 @@
+PASS: isolated strict TS diagnostic on the changed helper/new observer spec/caller spec.
+Uses installed Playwright CORE Page/Request/Frame types with a test/expect declaration shim.
+NOT the application typecheck or the real project Playwright Test package.

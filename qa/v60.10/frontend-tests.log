@@ -1,0 +1,1250 @@
+
+> singh-academy@60.10.0 test:reliability
+> node --test frontend/test/*.test.mjs
+
+TAP version 13
+# Subtest: API defaults to same-origin /api instead of a visitor localhost
+ok 1 - API defaults to same-origin /api instead of a visitor localhost
+  ---
+  duration_ms: 120.263058
+  type: 'test'
+  ...
+# Subtest: transient GET failure retries once without expiring session
+ok 2 - transient GET failure retries once without expiring session
+  ---
+  duration_ms: 441.737602
+  type: 'test'
+  ...
+# Subtest: long Retry-After is respected without hammering the backend
+ok 3 - long Retry-After is respected without hammering the backend
+  ---
+  duration_ms: 34.455004
+  type: 'test'
+  ...
+# Subtest: only recognized SESSION_REQUIRED requests a session recheck
+ok 4 - only recognized SESSION_REQUIRED requests a session recheck
+  ---
+  duration_ms: 45.315803
+  type: 'test'
+  ...
+# Subtest: provider/password 401 does not clear the student session
+ok 5 - provider/password 401 does not clear the student session
+  ---
+  duration_ms: 39.890719
+  type: 'test'
+  ...
+# Subtest: mutating checkout is never automatically retried
+ok 6 - mutating checkout is never automatically retried
+  ---
+  duration_ms: 43.152029
+  type: 'test'
+  ...
+# Subtest: shared public request survives one subscriber abort
+ok 7 - shared public request survives one subscriber abort
+  ---
+  duration_ms: 19.435318
+  type: 'test'
+  ...
+# Subtest: only public data is reused; private progress is read per request
+ok 8 - only public data is reused; private progress is read per request
+  ---
+  duration_ms: 24.470237
+  type: 'test'
+  ...
+# Subtest: caller cancellation remains AbortError, not a fabricated timeout
+ok 9 - caller cancellation remains AbortError, not a fabricated timeout
+  ---
+  duration_ms: 41.292654
+  type: 'test'
+  ...
+# Subtest: stale 401 from before a new login cannot invalidate that account
+ok 10 - stale 401 from before a new login cannot invalidate that account
+  ---
+  duration_ms: 15.962661
+  type: 'test'
+  ...
+# Subtest: login-only catalog and private requests both include HttpOnly cookies
+ok 11 - login-only catalog and private requests both include HttpOnly cookies
+  ---
+  duration_ms: 13.440495
+  type: 'test'
+  ...
+# Subtest: invalid upstream HTML is not converted into empty JSON success
+ok 12 - invalid upstream HTML is not converted into empty JSON success
+  ---
+  duration_ms: 411.159303
+  type: 'test'
+  ...
+# Subtest: successful logout fences cached session replies across reloads until credentials login
+ok 13 - successful logout fences cached session replies across reloads until credentials login
+  ---
+  duration_ms: 42.147747
+  type: 'test'
+  ...
+# Subtest: late successful private response from before logout cannot expose old billing
+ok 14 - late successful private response from before logout cannot expose old billing
+  ---
+  duration_ms: 30.561824
+  type: 'test'
+  ...
+# Subtest: in-flight credentials login cannot undo a newer explicit logout
+ok 15 - in-flight credentials login cannot undo a newer explicit logout
+  ---
+  duration_ms: 14.786162
+  type: 'test'
+  ...
+# Subtest: logout fence does not hide public reviews or public payment methods
+ok 16 - logout fence does not hide public reviews or public payment methods
+  ---
+  duration_ms: 14.882704
+  type: 'test'
+  ...
+# Subtest: failed explicit logout does not restore browser identity and can be retried
+ok 17 - failed explicit logout does not restore browser identity and can be retried
+  ---
+  duration_ms: 13.722996
+  type: 'test'
+  ...
+# Subtest: explicit new login waits for pending logout cookie expiration before it sends credentials
+ok 18 - explicit new login waits for pending logout cookie expiration before it sends credentials
+  ---
+  duration_ms: 14.400974
+  type: 'test'
+  ...
+# Subtest: simultaneous logout clicks share a single revocation request
+ok 19 - simultaneous logout clicks share a single revocation request
+  ---
+  duration_ms: 23.508223
+  type: 'test'
+  ...
+# Subtest: catalog memoization is portal-specific even with an explicit portal header
+ok 20 - catalog memoization is portal-specific even with an explicit portal header
+  ---
+  duration_ms: 13.453547
+  type: 'test'
+  ...
+# Subtest: logout drops the catalog snapshot instead of exposing cached content after sign-out
+ok 21 - logout drops the catalog snapshot instead of exposing cached content after sign-out
+  ---
+  duration_ms: 15.904762
+  type: 'test'
+  ...
+# Subtest: late catalog response from before logout cannot repopulate a new session cache
+ok 22 - late catalog response from before logout cannot repopulate a new session cache
+  ---
+  duration_ms: 18.919026
+  type: 'test'
+  ...
+# Subtest: verified student remains signed in after transient session 503
+ok 23 - verified student remains signed in after transient session 503
+  ---
+  duration_ms: 127.533691
+  type: 'test'
+  ...
+# Subtest: initial session failure stays unresolved rather than redirecting as an anonymous user
+ok 24 - initial session failure stays unresolved rather than redirecting as an anonymous user
+  ---
+  duration_ms: 75.145237
+  type: 'test'
+  ...
+# Subtest: identical session refresh preserves user object identity and therefore learning draft dependencies
+ok 25 - identical session refresh preserves user object identity and therefore learning draft dependencies
+  ---
+  duration_ms: 36.45049
+  type: 'test'
+  ...
+# Subtest: confirmed anonymous session actually clears expired authentication
+ok 26 - confirmed anonymous session actually clears expired authentication
+  ---
+  duration_ms: 43.025007
+  type: 'test'
+  ...
+# Subtest: old anonymous response cannot overwrite a later successful login
+ok 27 - old anonymous response cannot overwrite a later successful login
+  ---
+  duration_ms: 52.013992
+  type: 'test'
+  ...
+# Subtest: failed explicit logout hides local identity and reports that server revocation needs retry
+ok 28 - failed explicit logout hides local identity and reports that server revocation needs retry
+  ---
+  duration_ms: 32.234718
+  type: 'test'
+  ...
+# Subtest: switching portals never reuses a student identity for client admin
+ok 29 - switching portals never reuses a student identity for client admin
+  ---
+  duration_ms: 22.499964
+  type: 'test'
+  ...
+# Subtest: changing verified accounts remounts private descendants under a different owner key
+ok 30 - changing verified accounts remounts private descendants under a different owner key
+  ---
+  duration_ms: 23.448296
+  type: 'test'
+  ...
+# Subtest: duplicate unauthorized notifications share one session revalidation
+ok 31 - duplicate unauthorized notifications share one session revalidation
+  ---
+  duration_ms: 16.612178
+  type: 'test'
+  ...
+# Subtest: successful logout survives pageshow, focus and manual session refresh
+ok 32 - successful logout survives pageshow, focus and manual session refresh
+  ---
+  duration_ms: 17.540876
+  type: 'test'
+  ...
+# Subtest: old session GET finishing after logout cannot bring the student back
+ok 33 - old session GET finishing after logout cannot bring the student back
+  ---
+  duration_ms: 33.342556
+  type: 'test'
+  ...
+# Subtest: storage logout from another tab clears current account immediately
+ok 34 - storage logout from another tab clears current account immediately
+  ---
+  duration_ms: 18.951264
+  type: 'test'
+  ...
+# Subtest: actual explicit sign-in after logout restores the newly authenticated account
+ok 35 - actual explicit sign-in after logout restores the newly authenticated account
+  ---
+  duration_ms: 14.182698
+  type: 'test'
+  ...
+# Subtest: student logout boundary does not sign out a separately authenticated admin
+ok 36 - student logout boundary does not sign out a separately authenticated admin
+  ---
+  duration_ms: 14.48938
+  type: 'test'
+  ...
+# Subtest: late student logout response cannot replace a separately opened admin session
+ok 37 - late student logout response cannot replace a separately opened admin session
+  ---
+  duration_ms: 32.592515
+  type: 'test'
+  ...
+# Subtest: logout success cannot clear a newer explicitly authenticated identity
+ok 38 - logout success cannot clear a newer explicitly authenticated identity
+  ---
+  duration_ms: 23.489061
+  type: 'test'
+  ...
+# Subtest: server-verified page session bootstraps login without a duplicate initial request
+ok 39 - server-verified page session bootstraps login without a duplicate initial request
+  ---
+  duration_ms: 17.706711
+  type: 'test'
+  ...
+# Subtest: verified bootstrap cannot resurrect identity after explicit logout
+ok 40 - verified bootstrap cannot resurrect identity after explicit logout
+  ---
+  duration_ms: 20.560736
+  type: 'test'
+  ...
+# Subtest: known cached empty catalog has no unnecessary loading flicker
+ok 41 - known cached empty catalog has no unnecessary loading flicker
+  ---
+  duration_ms: 66.954437
+  type: 'test'
+  ...
+# Subtest: transient catalog refresh failure keeps real previous courses visible
+ok 42 - transient catalog refresh failure keeps real previous courses visible
+  ---
+  duration_ms: 13.603945
+  type: 'test'
+  ...
+# Subtest: catalog background refresh pauses while hidden and offline
+ok 43 - catalog background refresh pauses while hidden and offline
+  ---
+  duration_ms: 10.823218
+  type: 'test'
+  ...
+# Subtest: malformed team/catalog response is an error, not a successful empty library
+ok 44 - malformed team/catalog response is an error, not a successful empty library
+  ---
+  duration_ms: 12.730218
+  type: 'test'
+  ...
+# Subtest: manual retry invalidates only catalog reuse then re-reads
+ok 45 - manual retry invalidates only catalog reuse then re-reads
+  ---
+  duration_ms: 10.323562
+  type: 'test'
+  ...
+# Subtest: pending certificate becomes downloadable status without reloading course/progress
+ok 46 - pending certificate becomes downloadable status without reloading course/progress
+  ---
+  duration_ms: 1.53348
+  type: 'test'
+  ...
+# Subtest: all views of the same certificate share one request and notify both subscribers
+ok 47 - all views of the same certificate share one request and notify both subscribers
+  ---
+  duration_ms: 0.262937
+  type: 'test'
+  ...
+# Subtest: pending interval is bounded at 3 seconds, no immediate recursive polling
+ok 48 - pending interval is bounded at 3 seconds, no immediate recursive polling
+  ---
+  duration_ms: 0.160957
+  type: 'test'
+  ...
+# Subtest: identical status does not trigger redundant component rendering
+ok 49 - identical status does not trigger redundant component rendering
+  ---
+  duration_ms: 0.242818
+  type: 'test'
+  ...
+# Subtest: hidden/offline document does not poll and visibility wake resumes
+ok 50 - hidden/offline document does not poll and visibility wake resumes
+  ---
+  duration_ms: 0.263087
+  type: 'test'
+  ...
+# Subtest: in-flight requests never overlap during focus storms
+ok 51 - in-flight requests never overlap during focus storms
+  ---
+  duration_ms: 0.255707
+  type: 'test'
+  ...
+# Subtest: last unmount cancels work and late status cannot update another account
+ok 52 - last unmount cancels work and late status cannot update another account
+  ---
+  duration_ms: 0.233935
+  type: 'test'
+  ...
+# Subtest: unrequested certificate IDs from a malformed response are never merged
+ok 53 - unrequested certificate IDs from a malformed response are never merged
+  ---
+  duration_ms: 0.23088
+  type: 'test'
+  ...
+# Subtest: temporary failure preserves pending record and backs off
+ok 54 - temporary failure preserves pending record and backs off
+  ---
+  duration_ms: 0.954717
+  type: 'test'
+  ...
+# Subtest: status feeds batch at most 100 IDs per backend read
+ok 55 - status feeds batch at most 100 IDs per backend read
+  ---
+  duration_ms: 0.694924
+  type: 'test'
+  ...
+# Subtest: new student watcher does not reuse previous students certificate status
+ok 56 - new student watcher does not reuse previous students certificate status
+  ---
+  duration_ms: 0.283088
+  type: 'test'
+  ...
+# Subtest: local smoke permits HTTP only with explicit flag and two loopback targets
+ok 57 - local smoke permits HTTP only with explicit flag and two loopback targets
+  ---
+  duration_ms: 1.142243
+  type: 'test'
+  ...
+# Subtest: local smoke option cannot downgrade public or LAN targets to HTTP
+ok 58 - local smoke option cannot downgrade public or LAN targets to HTTP
+  ---
+  duration_ms: 0.224491
+  type: 'test'
+  ...
+# Subtest: deployed smoke targets require origin-only URLs without embedded credentials
+ok 59 - deployed smoke targets require origin-only URLs without embedded credentials
+  ---
+  duration_ms: 1.037438
+  type: 'test'
+  ...
+# Subtest: deployment CLI accepts expected anonymous catalog 401 and checks both app releases
+ok 60 - deployment CLI accepts expected anonymous catalog 401 and checks both app releases
+  ---
+  duration_ms: 201.098812
+  type: 'test'
+  ...
+# Subtest: a new API behind an old frontend is detected, not falsely declared ready
+ok 61 - a new API behind an old frontend is detected, not falsely declared ready
+  ---
+  duration_ms: 123.055413
+  type: 'test'
+  ...
+# Subtest: two health version mismatches fail even when HTTP 200
+ok 62 - two health version mismatches fail even when HTTP 200
+  ---
+  duration_ms: 104.975258
+  type: 'test'
+  ...
+# Subtest: unprotected anonymous catalog is a deployment security failure
+ok 63 - unprotected anonymous catalog is a deployment security failure
+  ---
+  duration_ms: 101.855789
+  type: 'test'
+  ...
+# Subtest: public landing summaries are verified, not just static landing HTML
+ok 64 - public landing summaries are verified, not just static landing HTML
+  ---
+  duration_ms: 166.069092
+  type: 'test'
+  ...
+# Subtest: free courses show Start instead of Open/Purchase, even for active members
+ok 65 - free courses show Start instead of Open/Purchase, even for active members
+  ---
+  duration_ms: 0.747973
+  type: 'test'
+  ...
+# Subtest: paid course and membership states keep their existing labels
+ok 66 - paid course and membership states keep their existing labels
+  ---
+  duration_ms: 0.103963
+  type: 'test'
+  ...
+# Subtest: free-course click takes the enrollment path before paid-access or checkout requests
+ok 67 - free-course click takes the enrollment path before paid-access or checkout requests
+  ---
+  duration_ms: 0.287994
+  type: 'test'
+  ...
+# Subtest: YouTube recorded lesson always opens paused at zero https://www.youtube.com/watch?v=abcdefghijk&t=30s
+ok 68 - YouTube recorded lesson always opens paused at zero https://www.youtube.com/watch?v=abcdefghijk&t=30s
+  ---
+  duration_ms: 1.400435
+  type: 'test'
+  ...
+# Subtest: YouTube recorded lesson always opens paused at zero https://youtu.be/abcdefghijk?t=20
+ok 69 - YouTube recorded lesson always opens paused at zero https://youtu.be/abcdefghijk?t=20
+  ---
+  duration_ms: 0.32507
+  type: 'test'
+  ...
+# Subtest: YouTube recorded lesson always opens paused at zero https://www.youtube.com/embed/abcdefghijk?start=35&autoplay=1
+ok 70 - YouTube recorded lesson always opens paused at zero https://www.youtube.com/embed/abcdefghijk?start=35&autoplay=1
+  ---
+  duration_ms: 0.189099
+  type: 'test'
+  ...
+# Subtest: YouTube recorded lesson always opens paused at zero https://youtube.com/shorts/abcdefghijk?feature=share&t=00m30s
+ok 71 - YouTube recorded lesson always opens paused at zero https://youtube.com/shorts/abcdefghijk?feature=share&t=00m30s
+  ---
+  duration_ms: 0.209829
+  type: 'test'
+  ...
+# Subtest: Vimeo keeps unlisted hash but starts at zero https://vimeo.com/123456789/abcdef1234\#t=30s
+ok 72 - Vimeo keeps unlisted hash but starts at zero https://vimeo.com/123456789/abcdef1234\#t=30s
+  ---
+  duration_ms: 0.208167
+  type: 'test'
+  ...
+# Subtest: Vimeo keeps unlisted hash but starts at zero https://player.vimeo.com/video/123456789?h=abcdef1234&autoplay=1\#t=20s
+ok 73 - Vimeo keeps unlisted hash but starts at zero https://player.vimeo.com/video/123456789?h=abcdef1234&autoplay=1\#t=20s
+  ---
+  duration_ms: 0.12182
+  type: 'test'
+  ...
+# Subtest: native video fragment seek is removed while signed query is preserved
+ok 74 - native video fragment seek is removed while signed query is preserved
+  ---
+  duration_ms: 0.207947
+  type: 'test'
+  ...
+# Subtest: unsafe video URL rejected javascript:alert(1)
+ok 75 - unsafe video URL rejected javascript:alert(1)
+  ---
+  duration_ms: 0.090713
+  type: 'test'
+  ...
+# Subtest: unsafe video URL rejected data:video/mp4;base64,ABC
+ok 76 - unsafe video URL rejected data:video/mp4;base64,ABC
+  ---
+  duration_ms: 0.231882
+  type: 'test'
+  ...
+# Subtest: unsafe video URL rejected https://user:pass@videos.example.test/lesson.mp4
+ok 77 - unsafe video URL rejected https://user:pass@videos.example.test/lesson.mp4
+  ---
+  duration_ms: 0.271701
+  type: 'test'
+  ...
+# Subtest: look-alike YouTube host is never trusted as a YouTube iframe
+ok 78 - look-alike YouTube host is never trusted as a YouTube iframe
+  ---
+  duration_ms: 0.224541
+  type: 'test'
+  ...
+# Subtest: Twitch recorded video has one autoplay flag and zero timestamp
+ok 79 - Twitch recorded video has one autoplay flag and zero timestamp
+  ---
+  duration_ms: 0.580537
+  type: 'test'
+  ...
+# Subtest: native player resets to 0 on metadata and does not autoplay before user input
+ok 80 - native player resets to 0 on metadata and does not autoplay before user input
+  ---
+  duration_ms: 19.56584
+  type: 'test'
+  ...
+# Subtest: poster click starts supported iframe only after explicit Play
+ok 81 - poster click starts supported iframe only after explicit Play
+  ---
+  duration_ms: 9.955099
+  type: 'test'
+  ...
+# Subtest: lesson identity is part of main and block player keys
+ok 82 - lesson identity is part of main and block player keys
+  ---
+  duration_ms: 0.293492
+  type: 'test'
+  ...
+# Subtest: only internal GridFS IDs get bounded responsive image URLs
+ok 83 - only internal GridFS IDs get bounded responsive image URLs
+  ---
+  duration_ms: 0.35266
+  type: 'test'
+  ...
+# Subtest: external signed images are not modified during retries
+ok 84 - external signed images are not modified during retries
+  ---
+  duration_ms: 0.112817
+  type: 'test'
+  ...
+# Subtest: broken optimized variant falls back to original image before placeholder
+ok 85 - broken optimized variant falls back to original image before placeholder
+  ---
+  duration_ms: 16.302578
+  type: 'test'
+  ...
+# Subtest: transient original failure retries once, then uses safe placeholder without looping
+ok 86 - transient original failure retries once, then uses safe placeholder without looping
+  ---
+  duration_ms: 10.096728
+  type: 'test'
+  ...
+# Subtest: changing image resets error state and cancels stale retry
+ok 87 - changing image resets error state and cancels stale retry
+  ---
+  duration_ms: 9.617951
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /home
+ok 88 - direct guest page redirects without exposing content: /home
+  ---
+  duration_ms: 2.619923
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /about
+ok 89 - direct guest page redirects without exposing content: /about
+  ---
+  duration_ms: 0.330297
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /courses
+ok 90 - direct guest page redirects without exposing content: /courses
+  ---
+  duration_ms: 0.197542
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /courses/test
+ok 91 - direct guest page redirects without exposing content: /courses/test
+  ---
+  duration_ms: 0.175588
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /team
+ok 92 - direct guest page redirects without exposing content: /team
+  ---
+  duration_ms: 0.26436
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /events
+ok 93 - direct guest page redirects without exposing content: /events
+  ---
+  duration_ms: 0.201647
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /contact
+ok 94 - direct guest page redirects without exposing content: /contact
+  ---
+  duration_ms: 0.194257
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /academy
+ok 95 - direct guest page redirects without exposing content: /academy
+  ---
+  duration_ms: 0.141038
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /reviews
+ok 96 - direct guest page redirects without exposing content: /reviews
+  ---
+  duration_ms: 0.51553
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /learn/test
+ok 97 - direct guest page redirects without exposing content: /learn/test
+  ---
+  duration_ms: 0.481229
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /my-course
+ok 98 - direct guest page redirects without exposing content: /my-course
+  ---
+  duration_ms: 0.25113
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /billing
+ok 99 - direct guest page redirects without exposing content: /billing
+  ---
+  duration_ms: 0.167317
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /certificates
+ok 100 - direct guest page redirects without exposing content: /certificates
+  ---
+  duration_ms: 0.117373
+  type: 'test'
+  ...
+# Subtest: direct guest page redirects without exposing content: /checkout/return?order=abc
+ok 101 - direct guest page redirects without exposing content: /checkout/return?order=abc
+  ---
+  duration_ms: 0.099717
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /
+ok 102 - necessary open route does not require a session: /
+  ---
+  duration_ms: 0.13509
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /connection?next=%2Fabout
+ok 103 - necessary open route does not require a session: /connection?next=%2Fabout
+  ---
+  duration_ms: 0.077374
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /login
+ok 104 - necessary open route does not require a session: /login
+  ---
+  duration_ms: 0.069412
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /register
+ok 105 - necessary open route does not require a session: /register
+  ---
+  duration_ms: 0.06764
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /forgot-password
+ok 106 - necessary open route does not require a session: /forgot-password
+  ---
+  duration_ms: 0.06747
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /reset-password?token=private
+ok 107 - necessary open route does not require a session: /reset-password?token=private
+  ---
+  duration_ms: 0.068821
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /terms
+ok 108 - necessary open route does not require a session: /terms
+  ---
+  duration_ms: 0.065006
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /privacy
+ok 109 - necessary open route does not require a session: /privacy
+  ---
+  duration_ms: 0.102581
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /admin/login
+ok 110 - necessary open route does not require a session: /admin/login
+  ---
+  duration_ms: 0.083082
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /super-admin/login
+ok 111 - necessary open route does not require a session: /super-admin/login
+  ---
+  duration_ms: 0.070624
+  type: 'test'
+  ...
+# Subtest: necessary open route does not require a session: /certificates/verify/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+ok 112 - necessary open route does not require a session: /certificates/verify/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  ---
+  duration_ms: 0.071045
+  type: 'test'
+  ...
+# Subtest: validated same-role session bootstraps student
+ok 113 - validated same-role session bootstraps student
+  ---
+  duration_ms: 2.249737
+  type: 'test'
+  ...
+# Subtest: validated same-role session bootstraps client_admin
+ok 114 - validated same-role session bootstraps client_admin
+  ---
+  duration_ms: 0.466668
+  type: 'test'
+  ...
+# Subtest: validated same-role session bootstraps super_admin
+ok 115 - validated same-role session bootstraps super_admin
+  ---
+  duration_ms: 0.65776
+  type: 'test'
+  ...
+# Subtest: a student cookie never authenticates the admin portal
+ok 116 - a student cookie never authenticates the admin portal
+  ---
+  duration_ms: 0.156571
+  type: 'test'
+  ...
+# Subtest: forged cookie without a valid DB session cannot open About
+ok 117 - forged cookie without a valid DB session cannot open About
+  ---
+  duration_ms: 0.436444
+  type: 'test'
+  ...
+# Subtest: client logout fence blocks document navigation even when an old cookie remains
+ok 118 - client logout fence blocks document navigation even when an old cookie remains
+  ---
+  duration_ms: 0.164523
+  type: 'test'
+  ...
+# Subtest: wrong-role or expired backend session redirects safely: {"success":true,"user":{"id":"super_admin-id","role":"super_admin","name":"Learner","email":"learner@example.invalid"}}
+ok 119 - wrong-role or expired backend session redirects safely: {"success":true,"user":{"id":"super_admin-id","role":"super_admin","name":"Learner","email":"learner@example.invalid"}}
+  ---
+  duration_ms: 0.486618
+  type: 'test'
+  ...
+# Subtest: wrong-role or expired backend session redirects safely: {"success":true,"user":null}
+ok 120 - wrong-role or expired backend session redirects safely: {"success":true,"user":null}
+  ---
+  duration_ms: 0.383275
+  type: 'test'
+  ...
+# Subtest: page auth 500 is unavailable, not a fabricated logout
+ok 121 - page auth 500 is unavailable, not a fabricated logout
+  ---
+  duration_ms: 0.411486
+  type: 'test'
+  ...
+# Subtest: page auth 502 is unavailable, not a fabricated logout
+ok 122 - page auth 502 is unavailable, not a fabricated logout
+  ---
+  duration_ms: 0.247065
+  type: 'test'
+  ...
+# Subtest: page auth 503 is unavailable, not a fabricated logout
+ok 123 - page auth 503 is unavailable, not a fabricated logout
+  ---
+  duration_ms: 0.504323
+  type: 'test'
+  ...
+# Subtest: page auth 504 is unavailable, not a fabricated logout
+ok 124 - page auth 504 is unavailable, not a fabricated logout
+  ---
+  duration_ms: 0.324488
+  type: 'test'
+  ...
+# Subtest: network failure fails closed without rendering protected page
+ok 125 - network failure fails closed without rendering protected page
+  ---
+  duration_ms: 0.261145
+  type: 'test'
+  ...
+# Subtest: incomplete JSON is not an authenticated bootstrap
+ok 126 - incomplete JSON is not an authenticated bootstrap
+  ---
+  duration_ms: 2.063353
+  type: 'test'
+  ...
+# Subtest: middleware strips a browser-supplied verified-session header even on public login
+ok 127 - middleware strips a browser-supplied verified-session header even on public login
+  ---
+  duration_ms: 12.235431
+  type: 'test'
+  ...
+# Subtest: middleware forwards only newly verified safe account snapshot
+ok 128 - middleware forwards only newly verified safe account snapshot
+  ---
+  duration_ms: 9.432569
+  type: 'test'
+  ...
+# Subtest: unavailable page middleware redirects to reconnect without logout or raw RSC HTML
+ok 129 - unavailable page middleware redirects to reconnect without logout or raw RSC HTML
+  ---
+  duration_ms: 7.438808
+  type: 'test'
+  ...
+# Subtest: proxy refuses missing, self-referencing and non-origin upstream settings
+ok 130 - proxy refuses missing, self-referencing and non-origin upstream settings
+  ---
+  duration_ms: 5.855484
+  type: 'test'
+  ...
+# Subtest: proxy resolves target at runtime and forbids upstream redirects
+ok 131 - proxy resolves target at runtime and forbids upstream redirects
+  ---
+  duration_ms: 3.96012
+  type: 'test'
+  ...
+# Subtest: proxy forwards cookies and portal, discards client host/IP spoof headers
+ok 132 - proxy forwards cookies and portal, discards client host/IP spoof headers
+  ---
+  duration_ms: 1.204917
+  type: 'test'
+  ...
+# Subtest: proxy preserves separate Set-Cookie headers, makes Academy cookies host-only, never CDN caches
+ok 133 - proxy preserves separate Set-Cookie headers, makes Academy cookies host-only, never CDN caches
+  ---
+  duration_ms: 0.987666
+  type: 'test'
+  ...
+# Subtest: upstream failure remains error, never successful anonymous session
+ok 134 - upstream failure remains error, never successful anonymous session
+  ---
+  duration_ms: 0.71202
+  type: 'test'
+  ...
+# Subtest: JSON error status passes through with request identity
+ok 135 - JSON error status passes through with request identity
+  ---
+  duration_ms: 3.976864
+  type: 'test'
+  ...
+# Subtest: raw webhook payload streams byte-for-byte through real HTTP upstream
+ok 136 - raw webhook payload streams byte-for-byte through real HTTP upstream
+  ---
+  duration_ms: 27.219686
+  type: 'test'
+  ...
+# Subtest: encoded traversal cannot escape the fixed /api namespace
+ok 137 - encoded traversal cannot escape the fixed /api namespace
+  ---
+  duration_ms: 0.51529
+  type: 'test'
+  ...
+# Subtest: range and binary response metadata survive without buffering/corrupting media
+ok 138 - range and binary response metadata survive without buffering/corrupting media
+  ---
+  duration_ms: 2.82154
+  type: 'test'
+  ...
+# Subtest: loopback HTTP exception is confined to explicit local test requests, not hosted review
+ok 139 - loopback HTTP exception is confined to explicit local test requests, not hosted review
+  ---
+  duration_ms: 0.490614
+  type: 'test'
+  ...
+# Subtest: only backend-proved public catalog image may use private browser cache
+ok 140 - only backend-proved public catalog image may use private browser cache
+  ---
+  duration_ms: 0.58988
+  type: 'test'
+  ...
+# Subtest: private receipt image remains no-store without catalog authorization marker
+ok 141 - private receipt image remains no-store without catalog authorization marker
+  ---
+  duration_ms: 0.324949
+  type: 'test'
+  ...
+# Subtest: public image marker cannot make JSON billing response cacheable
+ok 142 - public image marker cannot make JSON billing response cacheable
+  ---
+  duration_ms: 0.349515
+  type: 'test'
+  ...
+# Subtest: only landing and deliberate exceptions are public
+ok 143 - only landing and deliberate exceptions are public
+  ---
+  duration_ms: 4.498002
+  type: 'test'
+  ...
+# Subtest: destination including query and hash survives login URL encoding
+ok 144 - destination including query and hash survives login URL encoding
+  ---
+  duration_ms: 0.382785
+  type: 'test'
+  ...
+# Subtest: development loopback can reach local API without copied Hostinger env
+ok 145 - development loopback can reach local API without copied Hostinger env
+  ---
+  duration_ms: 0.173756
+  type: 'test'
+  ...
+# Subtest: hosted API origin is never guessed production
+ok 146 - hosted API origin is never guessed production
+  ---
+  duration_ms: 0.270429
+  type: 'test'
+  ...
+# Subtest: hosted API origin is never guessed development
+ok 147 - hosted API origin is never guessed development
+  ---
+  duration_ms: 0.08797
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: active 2026-10-03T23:59Z
+ok 148 - browser and API day count agree: active 2026-10-03T23:59Z
+  ---
+  duration_ms: 0.547347
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: active 2026-10-04T00:01Z
+ok 149 - browser and API day count agree: active 2026-10-04T00:01Z
+  ---
+  duration_ms: 0.193566
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: active 2027-10-03T10:00Z
+ok 150 - browser and API day count agree: active 2027-10-03T10:00Z
+  ---
+  duration_ms: 0.083103
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: active 2027-10-03T20:31Z
+ok 151 - browser and API day count agree: active 2027-10-03T20:31Z
+  ---
+  duration_ms: 0.252432
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: cancelled 2026-10-03T23:59Z
+ok 152 - browser and API day count agree: cancelled 2026-10-03T23:59Z
+  ---
+  duration_ms: 0.295155
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: cancelled 2026-10-04T00:01Z
+ok 153 - browser and API day count agree: cancelled 2026-10-04T00:01Z
+  ---
+  duration_ms: 0.163922
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: cancelled 2027-10-03T10:00Z
+ok 154 - browser and API day count agree: cancelled 2027-10-03T10:00Z
+  ---
+  duration_ms: 0.069452
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: cancelled 2027-10-03T20:31Z
+ok 155 - browser and API day count agree: cancelled 2027-10-03T20:31Z
+  ---
+  duration_ms: 0.050064
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: expired 2026-10-03T23:59Z
+ok 156 - browser and API day count agree: expired 2026-10-03T23:59Z
+  ---
+  duration_ms: 0.083183
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: expired 2026-10-04T00:01Z
+ok 157 - browser and API day count agree: expired 2026-10-04T00:01Z
+  ---
+  duration_ms: 0.071576
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: expired 2027-10-03T10:00Z
+ok 158 - browser and API day count agree: expired 2027-10-03T10:00Z
+  ---
+  duration_ms: 0.045527
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: expired 2027-10-03T20:31Z
+ok 159 - browser and API day count agree: expired 2027-10-03T20:31Z
+  ---
+  duration_ms: 0.038056
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: past_due 2026-10-03T23:59Z
+ok 160 - browser and API day count agree: past_due 2026-10-03T23:59Z
+  ---
+  duration_ms: 0.036734
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: past_due 2026-10-04T00:01Z
+ok 161 - browser and API day count agree: past_due 2026-10-04T00:01Z
+  ---
+  duration_ms: 0.035492
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: past_due 2027-10-03T10:00Z
+ok 162 - browser and API day count agree: past_due 2027-10-03T10:00Z
+  ---
+  duration_ms: 0.035602
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: past_due 2027-10-03T20:31Z
+ok 163 - browser and API day count agree: past_due 2027-10-03T20:31Z
+  ---
+  duration_ms: 0.036033
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: unknown 2026-10-03T23:59Z
+ok 164 - browser and API day count agree: unknown 2026-10-03T23:59Z
+  ---
+  duration_ms: 0.04081
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: unknown 2026-10-04T00:01Z
+ok 165 - browser and API day count agree: unknown 2026-10-04T00:01Z
+  ---
+  duration_ms: 0.037976
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: unknown 2027-10-03T10:00Z
+ok 166 - browser and API day count agree: unknown 2027-10-03T10:00Z
+  ---
+  duration_ms: 0.038056
+  type: 'test'
+  ...
+# Subtest: browser and API day count agree: unknown 2027-10-03T20:31Z
+ok 167 - browser and API day count agree: unknown 2027-10-03T20:31Z
+  ---
+  duration_ms: 0.037596
+  type: 'test'
+  ...
+# Subtest: checkout key uses cryptographic fallback when randomUUID is unavailable
+ok 168 - checkout key uses cryptographic fallback when randomUUID is unavailable
+  ---
+  duration_ms: 0.19676
+  type: 'test'
+  ...
+# Subtest: checkout refuses an insecure randomness fallback
+ok 169 - checkout refuses an insecure randomness fallback
+  ---
+  duration_ms: 0.222989
+  type: 'test'
+  ...
+# Subtest: approved hosted checkout URL stripe
+ok 170 - approved hosted checkout URL stripe
+  ---
+  duration_ms: 0.167868
+  type: 'test'
+  ...
+# Subtest: approved hosted checkout URL paypal
+ok 171 - approved hosted checkout URL paypal
+  ---
+  duration_ms: 0.049052
+  type: 'test'
+  ...
+# Subtest: unsafe checkout URL rejected https://checkout.stripe.com.evil.test
+ok 172 - unsafe checkout URL rejected https://checkout.stripe.com.evil.test
+  ---
+  duration_ms: 0.123332
+  type: 'test'
+  ...
+# Subtest: unsafe checkout URL rejected http://checkout.stripe.com/a
+ok 173 - unsafe checkout URL rejected http://checkout.stripe.com/a
+  ---
+  duration_ms: 0.06086
+  type: 'test'
+  ...
+# Subtest: unsafe checkout URL rejected https://u:p@checkout.stripe.com
+ok 174 - unsafe checkout URL rejected https://u:p@checkout.stripe.com
+  ---
+  duration_ms: 0.051606
+  type: 'test'
+  ...
+# Subtest: unsafe checkout URL rejected https://checkout.stripe.com:444/a
+ok 175 - unsafe checkout URL rejected https://checkout.stripe.com:444/a
+  ---
+  duration_ms: 0.044435
+  type: 'test'
+  ...
+# Subtest: unsafe checkout URL rejected undefined
+ok 176 - unsafe checkout URL rejected undefined
+  ---
+  duration_ms: 0.062763
+  type: 'test'
+  ...
+# Subtest: only stale code chunk errors are eligible for automatic reload
+ok 177 - only stale code chunk errors are eligible for automatic reload
+  ---
+  duration_ms: 0.262537
+  type: 'test'
+  ...
+# Subtest: stale chunk reload is bounded even when replacement fails
+ok 178 - stale chunk reload is bounded even when replacement fails
+  ---
+  duration_ms: 0.138154
+  type: 'test'
+  ...
+# Subtest: blocked browser storage cannot create a reload loop
+ok 179 - blocked browser storage cannot create a reload loop
+  ---
+  duration_ms: 0.089322
+  type: 'test'
+  ...
+# Subtest: rapid checkout clicks create one request and same key is retained after provider Back
+ok 180 - rapid checkout clicks create one request and same key is retained after provider Back
+  ---
+  duration_ms: 49.370648
+  type: 'test'
+  ...
+# Subtest: checkout timeout releases busy state but never automatically repeats a purchase
+ok 181 - checkout timeout releases busy state but never automatically repeats a purchase
+  ---
+  duration_ms: 28.597938
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: null
+ok 182 - malformed historical website content cannot break image rendering: null
+  ---
+  duration_ms: 0.165204
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: undefined
+ok 183 - malformed historical website content cannot break image rendering: undefined
+  ---
+  duration_ms: 0.052427
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: []
+ok 184 - malformed historical website content cannot break image rendering: []
+  ---
+  duration_ms: 0.04783
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: {"images":{}}
+ok 185 - malformed historical website content cannot break image rendering: {"images":{}}
+  ---
+  duration_ms: 0.039488
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: {"images":"bad","text":[]}
+ok 186 - malformed historical website content cannot break image rendering: {"images":"bad","text":[]}
+  ---
+  duration_ms: 0.045757
+  type: 'test'
+  ...
+# Subtest: malformed historical website content cannot break image rendering: {"images":[null,"x",{},42],"text":{"key":12}}
+ok 187 - malformed historical website content cannot break image rendering: {"images":[null,"x",{},42],"text":{"key":12}}
+  ---
+  duration_ms: 0.211161
+  type: 'test'
+  ...
+# Subtest: payment return reconciles once and stops polling after server-confirmed payment
+ok 188 - payment return reconciles once and stops polling after server-confirmed payment
+  ---
+  duration_ms: 18.929182
+  type: 'test'
+  ...
+# Subtest: cancelled provider return only reads status and never requests capture
+ok 189 - cancelled provider return only reads status and never requests capture
+  ---
+  duration_ms: 14.871538
+  type: 'test'
+  ...
+# Subtest: pending payment confirmation is single-flight even if page events repeat
+ok 190 - pending payment confirmation is single-flight even if page events repeat
+  ---
+  duration_ms: 17.377043
+  type: 'test'
+  ...
+# Subtest: bad payment response displays retry, not a render exception or success
+ok 191 - bad payment response displays retry, not a render exception or success
+  ---
+  duration_ms: 11.853819
+  type: 'test'
+  ...
+# Subtest: guest landing CTA retains target before sign-in: /about
+ok 192 - guest landing CTA retains target before sign-in: /about
+  ---
+  duration_ms: 5.824788
+  type: 'test'
+  ...
+# Subtest: guest landing CTA retains target before sign-in: /courses?category=leadership
+ok 193 - guest landing CTA retains target before sign-in: /courses?category=leadership
+  ---
+  duration_ms: 4.207134
+  type: 'test'
+  ...
+# Subtest: guest landing CTA retains target before sign-in: \#pricing
+ok 194 - guest landing CTA retains target before sign-in: \#pricing
+  ---
+  duration_ms: 4.314943
+  type: 'test'
+  ...
+# Subtest: guest landing CTA retains target before sign-in: /\#courses
+ok 195 - guest landing CTA retains target before sign-in: /\#courses
+  ---
+  duration_ms: 4.249416
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: /
+ok 196 - essential/external landing link is not trapped in a login loop: /
+  ---
+  duration_ms: 4.450122
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: /login
+ok 197 - essential/external landing link is not trapped in a login loop: /login
+  ---
+  duration_ms: 3.927321
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: /register
+ok 198 - essential/external landing link is not trapped in a login loop: /register
+  ---
+  duration_ms: 5.762707
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: /terms
+ok 199 - essential/external landing link is not trapped in a login loop: /terms
+  ---
+  duration_ms: 3.58752
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: mailto:info@singhacademy.com
+ok 200 - essential/external landing link is not trapped in a login loop: mailto:info@singhacademy.com
+  ---
+  duration_ms: 3.63445
+  type: 'test'
+  ...
+# Subtest: essential/external landing link is not trapped in a login loop: https://www.youtube.com/
+ok 201 - essential/external landing link is not trapped in a login loop: https://www.youtube.com/
+  ---
+  duration_ms: 3.543795
+  type: 'test'
+  ...
+# Subtest: signed-in landing page remains visible and links do not redirect to login
+ok 202 - signed-in landing page remains visible and links do not redirect to login
+  ---
+  duration_ms: 3.626207
+  type: 'test'
+  ...
+# Subtest: guest team modal CTA requires login but menu toggle remains usable
+ok 203 - guest team modal CTA requires login but menu toggle remains usable
+  ---
+  duration_ms: 7.458898
+  type: 'test'
+  ...
+# Subtest: landing courses/team/reviews consumers share one network request
+ok 204 - landing courses/team/reviews consumers share one network request
+  ---
+  duration_ms: 32.04424
+  type: 'test'
+  ...
+# Subtest: failed compact session is not immediately retried by API client
+ok 205 - failed compact session is not immediately retried by API client
+  ---
+  duration_ms: 24.024364
+  type: 'test'
+  ...
+# Subtest: explicit logout also fences compact session rechecks
+ok 206 - explicit logout also fences compact session rechecks
+  ---
+  duration_ms: 21.163957
+  type: 'test'
+  ...
+1..206
+# tests 206
+# suites 0
+# pass 206
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2266.689206

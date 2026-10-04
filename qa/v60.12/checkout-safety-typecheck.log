@@ -1,0 +1,3 @@
+Command: global TypeScript --strict --noEmit --target es2022 --lib es2022,dom frontend/lib/checkoutSafety.ts
+Exit status: 0
+Scope: standalone helper only; NOT full Next/React TypeScript validation.

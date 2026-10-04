@@ -1,0 +1,316 @@
+TAP version 13
+# Subtest: runtime policy accepts stable version string 22.0.0
+ok 1 - runtime policy accepts stable version string 22.0.0
+  ---
+  duration_ms: 1.766924
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 22.16.0
+ok 2 - runtime policy accepts stable version string 22.16.0
+  ---
+  duration_ms: 0.443486
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 22.23.3
+ok 3 - runtime policy accepts stable version string 22.23.3
+  ---
+  duration_ms: 0.100031
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.0.0
+ok 4 - runtime policy accepts stable version string 24.0.0
+  ---
+  duration_ms: 0.075713
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.18.0
+ok 5 - runtime policy accepts stable version string 24.18.0
+  ---
+  duration_ms: 0.067221
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string v24.18.0
+ok 6 - runtime policy accepts stable version string v24.18.0
+  ---
+  duration_ms: 0.05314
+  type: 'test'
+  ...
+# Subtest: runtime policy accepts stable version string 24.21.0
+ok 7 - runtime policy accepts stable version string 24.21.0
+  ---
+  duration_ms: 0.100391
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "18.20.0"
+ok 8 - runtime policy rejects unsupported/invalid input "18.20.0"
+  ---
+  duration_ms: 0.360591
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "20.19.0"
+ok 9 - runtime policy rejects unsupported/invalid input "20.19.0"
+  ---
+  duration_ms: 0.33984
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "21.7.3"
+ok 10 - runtime policy rejects unsupported/invalid input "21.7.3"
+  ---
+  duration_ms: 0.272109
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "23.11.0"
+ok 11 - runtime policy rejects unsupported/invalid input "23.11.0"
+  ---
+  duration_ms: 0.116895
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "25.0.0"
+ok 12 - runtime policy rejects unsupported/invalid input "25.0.0"
+  ---
+  duration_ms: 0.079339
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "26.0.0"
+ok 13 - runtime policy rejects unsupported/invalid input "26.0.0"
+  ---
+  duration_ms: 0.050997
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24.18.0-nightly"
+ok 14 - runtime policy rejects unsupported/invalid input "24.18.0-nightly"
+  ---
+  duration_ms: 0.045198
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "22.0.0-rc.1"
+ok 15 - runtime policy rejects unsupported/invalid input "22.0.0-rc.1"
+  ---
+  duration_ms: 0.038147
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "22.x"
+ok 16 - runtime policy rejects unsupported/invalid input "22.x"
+  ---
+  duration_ms: 0.048032
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24"
+ok 17 - runtime policy rejects unsupported/invalid input "24"
+  ---
+  duration_ms: 0.059379
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "024.18.0"
+ok 18 - runtime policy rejects unsupported/invalid input "024.18.0"
+  ---
+  duration_ms: 0.042504
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input "24.18.0 trailing"
+ok 19 - runtime policy rejects unsupported/invalid input "24.18.0 trailing"
+  ---
+  duration_ms: 0.038848
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input ""
+ok 20 - runtime policy rejects unsupported/invalid input ""
+  ---
+  duration_ms: 0.035022
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input null
+ok 21 - runtime policy rejects unsupported/invalid input null
+  ---
+  duration_ms: 0.037456
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input 24
+ok 22 - runtime policy rejects unsupported/invalid input 24
+  ---
+  duration_ms: 0.036525
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input {}
+ok 23 - runtime policy rejects unsupported/invalid input {}
+  ---
+  duration_ms: 0.040691
+  type: 'test'
+  ...
+# Subtest: runtime policy rejects unsupported/invalid input []
+ok 24 - runtime policy rejects unsupported/invalid input []
+  ---
+  duration_ms: 0.0402
+  type: 'test'
+  ...
+# Subtest: default policy reads the actually executing Node runtime, without an NVM check
+ok 25 - default policy reads the actually executing Node runtime, without an NVM check
+  ---
+  duration_ms: 0.088773
+  type: 'test'
+  ...
+# Subtest: actual root/backend/frontend declare exactly the same accepted engines and version
+ok 26 - actual root/backend/frontend declare exactly the same accepted engines and version
+  ---
+  duration_ms: 0.482284
+  type: 'test'
+  ...
+# Subtest: Node 24 summary distinguishes local policy acceptance from Hostinger Node 22 evidence
+ok 27 - Node 24 summary distinguishes local policy acceptance from Hostinger Node 22 evidence
+  ---
+  duration_ms: 2.215678
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: package.json
+ok 28 - an old Node-22-only manifest is identified: package.json
+  ---
+  duration_ms: 1.018811
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: backend/package.json
+ok 29 - an old Node-22-only manifest is identified: backend/package.json
+  ---
+  duration_ms: 0.909176
+  type: 'test'
+  ...
+# Subtest: an old Node-22-only manifest is identified: frontend/package.json
+ok 30 - an old Node-22-only manifest is identified: frontend/package.json
+  ---
+  duration_ms: 0.818469
+  type: 'test'
+  ...
+# Subtest: mixed patch versions are not accepted: backend/package.json
+ok 31 - mixed patch versions are not accepted: backend/package.json
+  ---
+  duration_ms: 0.740452
+  type: 'test'
+  ...
+# Subtest: mixed patch versions are not accepted: frontend/package.json
+ok 32 - mixed patch versions are not accepted: frontend/package.json
+  ---
+  duration_ms: 0.900452
+  type: 'test'
+  ...
+# Subtest: malformed or missing manifest produces an actionable message without echoing file contents
+ok 33 - malformed or missing manifest produces an actionable message without echoing file contents
+  ---
+  duration_ms: 0.786061
+  type: 'test'
+  ...
+# Subtest: the original nine commands, order, audits and full browser gate are retained
+ok 34 - the original nine commands, order, audits and full browser gate are retained
+  ---
+  duration_ms: 0.675264
+  type: 'test'
+  ...
+# Subtest: explicit remote option appends verification only, never a charge-creation command
+ok 35 - explicit remote option appends verification only, never a charge-creation command
+  ---
+  duration_ms: 0.089584
+  type: 'test'
+  ...
+# Subtest: simulated successful gate retains every check under 22.16.0
+ok 36 - simulated successful gate retains every check under 22.16.0
+  ---
+  duration_ms: 4.889975
+  type: 'test'
+  ...
+# Subtest: simulated successful gate retains every check under 24.18.0
+ok 37 - simulated successful gate retains every check under 24.18.0
+  ---
+  duration_ms: 4.151657
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 1 and never marks later commands passed
+ok 38 - simulated gate stops at command 1 and never marks later commands passed
+  ---
+  duration_ms: 1.567234
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 2 and never marks later commands passed
+ok 39 - simulated gate stops at command 2 and never marks later commands passed
+  ---
+  duration_ms: 1.478571
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 3 and never marks later commands passed
+ok 40 - simulated gate stops at command 3 and never marks later commands passed
+  ---
+  duration_ms: 1.650169
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 4 and never marks later commands passed
+ok 41 - simulated gate stops at command 4 and never marks later commands passed
+  ---
+  duration_ms: 2.167886
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 5 and never marks later commands passed
+ok 42 - simulated gate stops at command 5 and never marks later commands passed
+  ---
+  duration_ms: 2.516551
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 6 and never marks later commands passed
+ok 43 - simulated gate stops at command 6 and never marks later commands passed
+  ---
+  duration_ms: 3.057843
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 7 and never marks later commands passed
+ok 44 - simulated gate stops at command 7 and never marks later commands passed
+  ---
+  duration_ms: 2.647347
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 8 and never marks later commands passed
+ok 45 - simulated gate stops at command 8 and never marks later commands passed
+  ---
+  duration_ms: 2.945755
+  type: 'test'
+  ...
+# Subtest: simulated gate stops at command 9 and never marks later commands passed
+ok 46 - simulated gate stops at command 9 and never marks later commands passed
+  ---
+  duration_ms: 3.703984
+  type: 'test'
+  ...
+# Subtest: an early unsupported runtime replaces stale success with failed + not_run entries
+ok 47 - an early unsupported runtime replaces stale success with failed + not_run entries
+  ---
+  duration_ms: 1.389126
+  type: 'test'
+  ...
+# Subtest: incomplete patch writes a failure report before installation or any service call
+ok 48 - incomplete patch writes a failure report before installation or any service call
+  ---
+  duration_ms: 1.314735
+  type: 'test'
+  ...
+# Subtest: commands do not mutate environment settings, secrets or lockfiles
+ok 49 - commands do not mutate environment settings, secrets or lockfiles
+  ---
+  duration_ms: 3.773278
+  type: 'test'
+  ...
+# Subtest: check:runtime CLI uses the current runtime and succeeds from an unrelated cwd
+ok 50 - check:runtime CLI uses the current runtime and succeeds from an unrelated cwd
+  ---
+  duration_ms: 34.831466
+  type: 'test'
+  ...
+# Subtest: CI declares both release families, with no single-runtime or auto-deploy shortcut
+ok 51 - CI declares both release families, with no single-runtime or auto-deploy shortcut
+  ---
+  duration_ms: 0.270557
+  type: 'test'
+  ...
+1..51
+# tests 51
+# suites 0
+# pass 51
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 154.452525

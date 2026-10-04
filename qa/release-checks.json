@@ -1,0 +1,57 @@
+{
+  "version": "60.13.3",
+  "node": "24.18.0",
+  "platform": "win32",
+  "arch": "x64",
+  "startedAt": "2026-10-04T14:03:10.977Z",
+  "finishedAt": "2026-10-04T14:11:52.464Z",
+  "status": "passed",
+  "scope": "LOCAL gates on the recorded Node runtime; fixture payments are not actual provider transactions",
+  "runtimePolicy": {
+    "allowed": "22.x || 24.x",
+    "existingDeploymentNodeMajor": 22,
+    "note": "A local pass does not verify a different deployment runtime. CI must pass for the deployed Node major, using the same commit and lockfiles."
+  },
+  "checks": [
+    {
+      "name": "Runtime policy and package consistency",
+      "status": "passed"
+    },
+    {
+      "name": "Install locked dependencies",
+      "status": "passed"
+    },
+    {
+      "name": "Local backend configuration",
+      "status": "passed"
+    },
+    {
+      "name": "Unit/reliability, protected UI, TypeScript, production build and production audits",
+      "status": "passed"
+    },
+    {
+      "name": "Full backend dependency audit",
+      "status": "passed"
+    },
+    {
+      "name": "Full frontend dependency audit",
+      "status": "passed"
+    },
+    {
+      "name": "Install project Chromium",
+      "status": "passed"
+    },
+    {
+      "name": "Full actual Next browser suite including auth, free course, certificate and payment fixtures",
+      "status": "passed"
+    },
+    {
+      "name": "Payment configuration (no charge)",
+      "status": "passed"
+    },
+    {
+      "name": "SMTP connection/authentication (not inbox delivery)",
+      "status": "passed"
+    }
+  ]
+}
